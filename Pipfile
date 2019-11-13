@@ -6,17 +6,18 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+flask = "*"
 jinja2 = "*"
 basilica = "*"
-tweepy = "*"
-redis = "*"
-psycopg2 = "*"
+psycopg2-binary = "*"
 flask-sqlalchemy = "*"
 gunicorn = "*"
 scikit-learn = "*"
-python = "*"
-dotenv = "*"
 python-decouple = "*"
+python-dotenv = "*"
+redis = "*"
+requests-html = "*"
+mechanicalsoup = "*"
 
 [requires]
 python_version = "3.7"

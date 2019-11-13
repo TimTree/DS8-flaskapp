@@ -1,0 +1,8 @@
+twitter_scraper was created by GitHub user bisguzar under the MIT License.
+Original URL: https://github.com/bisguzar/twitter-scraper
+
+The twitter_scraper here has been modified to:
+- Also parse the Twitter user ID in profile.py
+- Add an option to not include retweets
+- Comment out the biography part of profile.py due to runtime bugs
+(and it's not needed for this project)
