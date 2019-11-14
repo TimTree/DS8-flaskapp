@@ -17,7 +17,7 @@ class User(DB.Model):
 class Message(DB.Model):
     """The user's message from the social media site"""
     id = DB.Column(DB.BigInteger, primary_key=True)
-    text = DB.Column(DB.Unicode(280))
+    text = DB.Column(DB.Unicode(500))
     user_id = DB.Column(DB.BigInteger, DB.ForeignKey('user.id'), nullable=False)
     user = DB.relationship('User', backref = DB.backref('messages',lazy=True))
 
