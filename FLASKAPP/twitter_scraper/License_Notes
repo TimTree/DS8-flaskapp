@@ -6,3 +6,5 @@ The twitter_scraper here has been modified to:
 - Add an option to not include retweets
 - Comment out the biography part of profile.py due to runtime bugs
 (and it's not needed for this project)
+- Add try/catch errors on some profile info to fix a NoneType
+error

@@ -68,16 +68,25 @@ class Profile:
             self.followers_count = 0
 
         # parse count of likes
-        q=page.find(attrs={"data-nav":"favorites"})
-        self.likes_count = int(q.attrs["title"].split(' ')[0].replace(',', ''))
+        try:
+            q=page.find(attrs={"data-nav":"favorites"})
+            self.likes_count = int(q.attrs["title"].split(' ')[0].replace(',', ''))
+        except:
+            self.likes_count = 0
 
         # parse count of following
-        q=page.find(attrs={"data-nav":"following"})
-        self.following_count = int(q.attrs["title"].split(' ')[0].replace(',',''))
+        try:
+            q=page.find(attrs={"data-nav":"following"})
+            self.following_count = int(q.attrs["title"].split(' ')[0].replace(',',''))
+        except:
+            self.following_count = 0
 
         # parse count of tweets
-        q=page.find(attrs={"data-nav":"tweets"})
-        self.tweets_count = int(q.attrs["title"].split(' ')[0].replace(',',''))
+        try:
+            q=page.find(attrs={"data-nav":"tweets"})
+            self.tweets_count = int(q.attrs["title"].split(' ')[0].replace(',',''))
+        except:
+            self.tweets_count = 0
 
         # parse user id
         self.userid = page.find(attrs={"class":"ProfileNav"}).attrs['data-user-id']
