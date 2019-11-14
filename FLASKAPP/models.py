@@ -16,9 +16,9 @@ class User(DB.Model):
 
 class Message(DB.Model):
     """The user's message from the social media site"""
-    id = DB.Column(DB.Integer, primary_key=True)
+    id = DB.Column(DB.BigInteger, primary_key=True)
     text = DB.Column(DB.Unicode(280))
-    user_id = DB.Column(DB.Integer, DB.ForeignKey('user.id'), nullable=False)
+    user_id = DB.Column(DB.BigInteger, DB.ForeignKey('user.id'), nullable=False)
     user = DB.relationship('User', backref = DB.backref('messages',lazy=True))
 
     embedding = DB.Column(DB.PickleType, nullable=False)
