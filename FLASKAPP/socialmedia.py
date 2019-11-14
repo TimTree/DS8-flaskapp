@@ -14,7 +14,7 @@ def add_or_update_user(username):
         db_user=(User.query.get(int(Profile(twitter_user).userid)) or
         User(id=int(Profile(twitter_user).userid), name=username))
         DB.session.add(db_user)
-        tweets = list(get_tweets(twitter_user, pages=5,include_rts=False))
+        tweets = list(get_tweets(twitter_user, pages=1,include_rts=False))
         if tweets:
             db_user.newest_tweet_id = int(tweets[0]['tweetId'])
         for tweet in tweets:
