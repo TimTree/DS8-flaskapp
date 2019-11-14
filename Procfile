@@ -1,1 +1,1 @@
-web: gunicorn FLASKAPP:APP
+web: gunicorn FLASKAPP:APP -t 120
